@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <title>A Paixão de Cristo 2026 - Comunidade Católica Eucaristós</title>
+    <meta name="description" content="Encenação A Paixão de Cristo 2026 — 03 de abril, 19h, Clube Esportivo da Penha. Ingresso: 1kg de alimento não perecível. Garanta seu lugar!">
+    <!-- SEO básico -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="paixão de cristo 2026, encenação, semana santa, penha, são paulo, evento católico">
+    <link rel="canonical" href="https://eucaristos.com.br">
+
+    <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A Paixão de Cristo 2026 — 03 de Abril | Penha, SP">
+    <meta property="og:description" content="Encenação A Paixão de Cristo 2026 — 03 de abril, 19h, Clube Esportivo da Penha. Ingresso: 1kg de alimento não perecível. Garanta seu lugar!">
+    <meta property="og:image" content="https://paixaodecristo.eucaristos.com.br/images/hero-banner.png">
+    <meta property="og:url" content="https://eucaristos.com.br">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Paixão de Cristo 2026 — 03 de Abril | Penha, SP">
+    <meta name="twitter:description" content="Encenação A Paixão de Cristo 2026 — 03 de abril, 19h, Clube Esportivo da Penha. Ingresso: 1kg de alimento não perecível.">
+    <meta name="twitter:image" content="https://paixaodecristo.eucaristos.com.br/images/hero-banner.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Roman SD';
+            src: url('fonts/Roman_SD.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange: #C34819;
+            --orange-dark: #9e3a14;
+            --white: #FFFFFF;
+            --bg-dark: #0e0401;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            /* Content anchored ~60% down — not flex-end (too low), not flex-start (too high) */
+            padding: clamp(18px, 10vw, 150px) clamp(32px, 6vw, 60px)
+        }
+
+        /* Flipped hero image */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('images/hero-banner.png');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Title: fills most of the width on mobile ── */
+        .hero-title {
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(3rem, 11vw, 4.0rem);
+            font-weight: normal;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: -0.8%;
+            line-height: 1;
+            margin-bottom: clamp(8px, 1.5vw, 14px);
+        }
+
+        /* ── Quote: italic sentence + orange ref on same line ── */
+        .hero-quote {
+            font-size: clamp(0.78rem, 1.8vw, 1.5rem);
+            color: var(--white);
+            font-style: italic;
+            margin-bottom: clamp(16px, 3vw, 40px);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .hero-quote .ref {
+            color: var(--orange);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .hero-divider {
+            width: 71%;
+            height: 1px;
+            background: var(--orange-dark);
+            margin-bottom: clamp(16px, 3vw, 40px);
+        }
+
+        .hero-date {
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(1.5rem, 5vw, 3.2rem);
+            font-weight: normal;
+            letter-spacing: -0.8%;
+            text-transform: uppercase;
+            margin-bottom: clamp(4px, 1vw, 10px);
+        }
+
+        .hero-venue {
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(1.1rem, 3.5vw, 2.2rem);
+            font-weight: normal;
+            letter-spacing: -0.8%;
+            text-transform: uppercase;
+            margin-bottom: clamp(4px, 2vw, 33px)
+        }
+
+        .hero-address {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.72rem, 1.4vw, 1.88rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: clamp(20px, 4vw, 48px);
+        }
+
+        .btn-ingresso {
+            display: inline-block;
+            background-color: var(--orange);
+            color: var(--white);
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(0.95rem, 3vw, 2.2rem);
+            letter-spacing: -0.8%;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: clamp(10px, 2vw, 18px) clamp(28px, 6vw, 30px);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+        }
+
+        .btn-ingresso:hover,
+        .btn-ingresso:focus {
+            background-color: var(--orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(195, 72, 25, 0.45);
+            outline: none;
+        }
+
+        /* ─── PAIXÃO 2026 SECTION ─── */
+        .paixao-section {
+            display: flex;
+            flex-direction: column;
+            background: url('images/texture.png');
+            background-size: cover;
+            background-color: #2b0700;
+            padding: clamp(40px, 8vw, 112px) clamp(20px, 20vw, 290px);
+        }
+
+        .ticket-label {
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: var(--orange);
+            letter-spacing: -0.8%;
+            text-transform: uppercase;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: clamp(20px, 3vw, 36px);
+        }
+
+        .paixao-title-row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: clamp(24px, 4vw, 44px);
+        }
+
+        .paixao-title {
+            font-family: 'Roman SD', 'Times New Roman', serif;
+            font-size: clamp(2.8rem, 8vw, 4.8rem);
+            font-weight: normal;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: -0.8%;;
+            line-height: 0.95;
+            flex-shrink: 0;
+        }
+
+        .paixao-side-quote {
+            font-size: clamp(0.72rem, 1.2vw, 0.9rem);
+            color: var(--white);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .paixao-side-quote .ref {
+            color: var(--orange);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .paixao-body p {
+            font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.9;
+            margin-bottom: clamp(14px, 2vw, 22px);
+            max-width: 860px;
+        }
+
+        .paixao-body p:last-child { margin-bottom: 0; }
+
+        /* ─── SPONSORS ─── */
+        .sponsors-section {
+            width: 100%;
+            line-height: 0;
+            background-color: #111;
+        }
+
+        .sponsors-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background-color: #0a0200;
+            padding: clamp(40px, 5vw, 60px) clamp(24px, 5vw, 80px);
+            text-align: center;
+            border-top: 1px solid rgba(195, 72, 25, 0.15);
+        }
+
+        .footer-realizacao {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.68rem, 1vw, 0.8rem);
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo-wrap {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-logo-wrap img {
+            max-width: clamp(130px, 18vw, 190px);
+            height: auto;
+        }
+
+        .footer-logo-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.55rem, 0.85vw, 0.68rem);
+            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        /* ─── MOBILE ≤ 600px ─── */
+        @media (max-width: 600px) {
+            /* On mobile show the crucifixion/left side of image */
+            .hero {
+                justify-content: end;
+            }
+            .hero-title {
+                text-align: center;
+            }
+            /* Dark gradient — heavier at bottom so text is always readable */
+            .hero::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                        to bottom,
+                        rgba(8, 3, 1, 0.05) 0%,
+                        rgba(8, 3, 1, 0.05) 35%,
+                        rgba(8, 3, 1, 0.60) 58%,
+                        rgba(8, 3, 1, 0.93) 76%,
+                        rgba(8, 3, 1, 1)    100%
+                );
+                z-index: 1;
+            }
+            .paixao-title-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .paixao-side-quote {
+                font-size: clamp(0.7rem, 1.3vw, 1rem);
+                padding-top: 0;
+                max-width: 100%;
+            }
+
+            /* Center-align body text on mobile for readability */
+            .paixao-header {
+                align-items: flex-start;
+            }
+            .paixao-section {
+                display: flex;
+                flex-direction: column;
+                background: url(images/texture.png);
+                background-size: cover;
+                padding: clamp(40px, 8vw, 112px) clamp(20px, 5vw, 290px);
+            }
+
+            .hero::before {
+                transform: scaleX(-1);
+                background-position:right;
+            }
+            .hero-divider {
+                width: 100%;
+            }
+            .hero-quote {
+                text-align: center;
+            }
+
+        }
+
+        /* ─── DESKTOP ≥ 1400px ─── */
+        @media (min-width: 1400px) {
+            .hero-content { max-width: 900px; }
+            .paixao-body p { max-width: 1000px; }
+            .paixao-body {text-align: center}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-label="Evento A Paixão de Cristo">
+    <div class="hero-content">
+        <h1 class="hero-title">A Paixão de Cristo</h1>
+        <p class="hero-quote">
+            "Verdadeiramente este homem era filho de Deus" <span class="ref">Mc 15,39</span>
+        </p>
+        <div class="hero-divider"></div>
+        <p class="hero-date">03 de Abril &ndash; 19h</p>
+        <p class="hero-venue">Clube Esportivo da Penha</p>
+        <p class="hero-address">Rua Capitão João Cesário, 354 &nbsp;|&nbsp; Salão Nobre</p>
+        <a href="https://www.sympla.com.br/evento/paixao-de-cristo-2026/3322068" class="btn-ingresso">Garanta Seu Ingresso</a>
+    </div>
+</section>
+
+<!-- ═══ PAIXÃO 2026 ═══ -->
+<section class="paixao-section" aria-label="Sobre o espetáculo">
+    <p class="ticket-label">Ingresso: 1kg de alimento não perecível</p>
+    <div class="paixao-title-row">
+        <h2 class="paixao-title">Paixão 2026</h2>
+        <p class="paixao-side-quote">
+            "Verdadeiramente este homem era filho de Deus" <span class="ref">Mc 15,39</span>
+        </p>
+    </div>
+    <div class="paixao-body">
+        <p>Roma proclama sua força. Os sacerdotes defendem sua lei. O povo grita por poder.<br>
+            Mas um Homem caminha em silêncio... falando de amor.</p>
+        <p>Entre moedas de traição e pedras de acusação, entre o medo de um governador e o
+            dilema de um soldado dividido, a Verdade toma forma humana — não para dominar,
+            mas para se entregar.</p>
+        <p>Uma mulher encontra misericórdia. Um discípulo vende o Mestre. Uma mãe sustenta
+            a dor. Um centurião descobre que a espada não é mais forte que o perdão.</p>
+        <p>Da agitação do Sinédrio ao alto do Calvário, esta encenação conduz o público a uma
+            experiência intensa de fé, onde a cruz revela que a verdadeira força não está no
+            império, mas no amor que se doa até o fim.</p>
+        <p>E diante desse amor, toda certeza é abalada.<br>
+            Toda verdade é confrontada.<br>
+            Todo coração é chamado a escolher.</p>
+    </div>
+</section>
+
+<!-- ═══ PATROCINADORES & APOIO ═══ -->
+<section class="sponsors-section" aria-label="Patrocinadores e apoio">
+    <img src="images/patrocinio.png" alt="Patrocinadores e Apoio" class="sponsors-img">
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer" aria-label="Rodapé">
+    <p class="footer-realizacao">Realização:</p>
+    <div class="footer-logo-wrap">
+        <img src="images/logo_euc.png" alt="Eucaristós — Comunidade Católica Eucaristós">
+        <span class="footer-logo-sub">Comunidade Católica Eucaristós</span>
+    </div>
+</footer>
+
+</body>
+</html>
