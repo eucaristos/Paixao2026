@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <title>Confirmar Presença – Paixão de Cristo 2026</title>
+  <meta name="description" content="Confirme sua presença na encenação A Paixão de Cristo 2026 — 03 de abril, 19h, Clube Esportivo da Penha.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Confirmar Presença – Paixão de Cristo 2026">
+  <meta property="og:description" content="Confirme sua presença na encenação A Paixão de Cristo 2026 — 03 de abril, 19h, Clube Esportivo da Penha.">
+  <meta property="og:image" content="https://paixaodecristo.eucaristos.com.br/images/hero-banner.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Roman SD';
+      src: url('fonts/Roman_SD.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --orange: #C34819;
+      --orange-dark: #9e3a14;
+      --white: #FFFFFF;
+      --bg-dark: #0e0401;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 30vh;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(18px, 10vw, 150px) clamp(32px, 6vw, 60px);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/hero-banner.png');
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-family: 'Roman SD', 'Times New Roman', serif;
+      font-size: clamp(3rem, 11vw, 4.0rem);
+      font-weight: normal;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: -0.8%;
+      line-height: 1;
+      margin-bottom: clamp(8px, 1.5vw, 14px);
+    }
+
+    .hero-quote {
+      font-size: clamp(0.78rem, 1.8vw, 1.5rem);
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: clamp(16px, 3vw, 40px);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .hero-quote .ref {
+      color: var(--orange);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    /* ─── CONFIRMAÇÃO ─── */
+    .confirmacao-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: url('images/texture.png');
+      background-size: cover;
+      background-color: #2b0700;
+      padding: clamp(40px, 8vw, 112px) clamp(20px, 10vw, 200px);
+      min-height: 70svh;
+    }
+
+    .confirmacao-title {
+      font-family: 'Roman SD', 'Times New Roman', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .confirmacao-subtitle {
+      font-size: clamp(0.78rem, 1.5vw, 1rem);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      margin-bottom: clamp(24px, 4vw, 48px);
+      font-style: italic;
+    }
+
+    /* ─── BUSCA ─── */
+    .search-wrap {
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      gap: 10px;
+      margin-bottom: clamp(24px, 4vw, 40px);
+    }
+
+    .search-input {
+      flex: 1;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(195,72,25,0.4);
+      border-radius: 8px;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input::placeholder { color: rgba(255,255,255,0.35); }
+    .search-input:focus { border-color: var(--orange); }
+
+    .btn-buscar {
+      background-color: var(--orange);
+      color: var(--white);
+      font-family: 'Roman SD', 'Times New Roman', serif;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .btn-buscar:hover { background-color: var(--orange-dark); transform: translateY(-1px); }
+
+    /* ─── LISTA ─── */
+    .participants-list {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 600px;
+      overflow: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .participant-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(195,72,25,0.2);
+      border-radius: 10px;
+      padding: 14px 20px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .participant-card:hover { border-color: var(--orange); background: rgba(195,72,25,0.08); }
+
+    .participant-info { display: flex; flex-direction: column; gap: 2px; }
+
+    .participant-name {
+      font-family: 'Roman SD', 'Times New Roman', serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .participant-ticket {
+      font-size: clamp(0.68rem, 1.2vw, 0.8rem);
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+    }
+
+    .btn-confirmar {
+      background-color: transparent;
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      font-family: 'Roman SD', 'Times New Roman', serif;
+      font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+      text-transform: uppercase;
+      border-radius: 6px;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-confirmar:hover { background-color: var(--orange); color: var(--white); }
+    .btn-confirmar.confirmado { background-color: #2a7a2a; border-color: #2a7a2a; color: var(--white); cursor: default; }
+
+    /* ─── ESTADOS ─── */
+    .estado {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 40px 0;
+      font-style: italic;
+    }
+
+    .counter {
+      font-size: clamp(0.72rem, 1.2vw, 0.85rem);
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 600px) {
+      .hero { justify-content: end; }
+
+      .hero-title { text-align: center; }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+                to bottom,
+                rgba(8,3,1,0.05) 0%,
+                rgba(8,3,1,0.05) 35%,
+                rgba(8,3,1,0.60) 58%,
+                rgba(8,3,1,0.93) 76%,
+                rgba(8,3,1,1)    100%
+        );
+        z-index: 1;
+      }
+
+      .hero::before {
+        transform: scaleX(-1);
+        background-position: right;
+      }
+
+      .hero-quote { text-align: center; }
+      .participants-list {
+        max-height: 300px;
+      }
+    }
+
+    /* ─── DESKTOP ─── */
+    @media (min-width: 1400px) {
+      .hero-content { max-width: 900px; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero" aria-label="Paixão de Cristo 2026">
+  <div class="hero-content">
+    <h1 class="hero-title">A Paixão de Cristo</h1>
+    <p class="hero-quote">
+      "Verdadeiramente este homem era filho de Deus"
+      <span class="ref">Mc 15,39</span>
+    </p>
+  </div>
+</section>
+
+<section class="confirmacao-section">
+  <h2 class="confirmacao-title">Confirmar Presença</h2>
+  <p class="confirmacao-subtitle">Busque seu nome ou número de ingresso</p>
+
+  <div class="search-wrap">
+    <input
+            class="search-input"
+            id="search"
+            type="text"
+            placeholder="Nome ou número do ingresso..."
+            oninput="filtrar()"
+    >
+    <button class="btn-buscar" onclick="filtrar()">Buscar</button>
+  </div>
+
+  <p class="counter" id="counter"></p>
+  <div class="participants-list" id="lista">
+    <p class="estado">Carregando participantes...</p>
+  </div>
+</section>
+
+<script>
+  const WEBHOOK_LISTAR_URL   = 'https://izzy.eucaristos.com.br/api/v1/webhooks/zmplUcORTzfYvcUtfHUJL/sync';
+  const WEBHOOK_CONFIRMAR_URL = 'https://izzy.eucaristos.com.br/api/v1/webhooks/ArmdFiluKQmvJqUCPL0CK/sync';
+
+  let todosParticipantes = [];
+
+  function limpar(str) {
+    return (str || '').toString().trim().replace(/\n/g, '').replace(/\r/g, '');
+  }
+
+  async function carregarParticipantes() {
+    try {
+      const res = await fetch(WEBHOOK_LISTAR_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+
+      const data = await res.json();
+      todosParticipantes = (data.participants || []).map(p => ({
+        id:            limpar(p.id),
+        ticket_number: limpar(p.ticket_number),
+        first_name:    limpar(p.first_name),
+        last_name:     limpar(p.last_name),
+        confirmado:    p.confirmado || false
+      }));
+
+      renderizar(todosParticipantes);
+    } catch (err) {
+      document.getElementById('lista').innerHTML =
+              '<p class="estado">Erro ao carregar participantes. Tente novamente.</p>';
+    }
+  }
+
+  function filtrar() {
+    const termo = document.getElementById('search').value.toLowerCase().trim();
+    const filtrados = todosParticipantes.filter(p =>
+            `${p.first_name} ${p.last_name}`.toLowerCase().includes(termo) ||
+            p.ticket_number.toLowerCase().includes(termo)
+    );
+    renderizar(filtrados);
+  }
+
+  function renderizar(lista) {
+    const el      = document.getElementById('lista');
+    const counter = document.getElementById('counter');
+
+    counter.textContent = `${lista.length} participante${lista.length !== 1 ? 's' : ''} encontrado${lista.length !== 1 ? 's' : ''}`;
+
+    if (lista.length === 0) {
+      el.innerHTML = '<p class="estado">Nenhum participante encontrado.</p>';
+      return;
+    }
+
+    el.innerHTML = lista.map(p => {
+      const nome   = `${p.first_name} ${p.last_name}`;
+      const jaconf = p.confirmado;
+      return `
+          <div class="participant-card">
+            <div class="participant-info">
+              <span class="participant-name">${nome}</span>
+              <span class="participant-ticket">${p.ticket_number}</span>
+            </div>
+            <button
+              class="btn-confirmar ${jaconf ? 'confirmado' : ''}"
+              id="btn-${p.ticket_number}"
+              onclick="${jaconf ? '' : `confirmar('${p.ticket_number}', '${nome}', '${p.id}')`}"
+              ${jaconf ? 'disabled' : ''}>
+              ${jaconf ? '✓ Confirmado' : 'Confirmar'}
+            </button>
+          </div>
+        `;
+    }).join('');
+  }
+
+  async function confirmar(ticket, nome_completo, id) {
+    const btn = document.getElementById(`btn-${ticket}`);
+    btn.textContent = 'Aguarde...';
+    btn.disabled = true;
+
+    try {
+      await fetch(WEBHOOK_CONFIRMAR_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_ingresso: id, ticket_number: ticket, nome_completo: nome_completo })
+      });
+
+      btn.textContent = '✓ Confirmado';
+      btn.classList.add('confirmado');
+
+    } catch {
+      btn.textContent = 'Confirmar';
+      btn.disabled = false;
+    }
+  }
+
+  carregarParticipantes();
+</script>
+
+</body>
+</html>
